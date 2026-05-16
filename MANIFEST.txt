@@ -1,0 +1,14 @@
+Expected runtime artifacts for the minimal reproducibility workflow:
+
+logs/run.log
+outputs/demo/network_model.json
+outputs/demo/simulation_results.json
+outputs/demo/analysis_summary.json
+outputs/demo/economics_summary.json
+outputs/demo/voltage_profile.csv
+outputs/demo/run_manifest.json
+
+Optional artifacts for future plotting extensions:
+
+outputs/demo/voltage_profile.png
+outputs/demo/loss_summary.png

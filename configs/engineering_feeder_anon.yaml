@@ -1,0 +1,47 @@
+study:
+  name: engineering_feeder_anon
+  description: Anonymized 10 kV engineering feeder mock configuration.
+  version: "0.1.0"
+  anonymization: feeder identifiers and locations are synthetic.
+
+feeder:
+  name: engineering_feeder_anon
+  type: anonymized_10kv_radial_feeder
+  voltage_class_kv: 10.0
+  bus_count: 18
+  line_count: 17
+  source_bus: bus_01
+
+loads:
+  total_kw: 1840.0
+  total_kvar: 620.0
+  load_scale: 0.85
+
+transformers:
+  - id: TR_A01
+    location: bus_03
+    capacity_kva: 100
+  - id: TR_A02
+    location: bus_07
+    capacity_kva: 160
+  - id: TR_A03
+    location: bus_11
+    capacity_kva: 250
+  - id: TR_A04
+    location: bus_15
+    capacity_kva: 400
+  - id: TR_A05
+    location: bus_18
+    capacity_kva: 630
+
+simulation:
+  method: dummy_power_flow
+  voltage_limits_pu:
+    lower: 0.95
+    upper: 1.05
+  max_iterations: 20
+
+economics:
+  currency: USD
+  energy_price_per_kwh: 0.11
+  annual_hours: 8760
